@@ -7,7 +7,7 @@ const Navbar = () => {
         const navTween = gsap.timeline({
             scrollTrigger: {
                 trigger: 'nav',
-                start: 'top top',
+                start: 'bottom top',
                 toggleActions: 'play reverse play reverse'
             }
         })
