@@ -61,9 +61,9 @@ const Art = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="mt-30 masked-container">
+                <div className="masked-container">
                     <h2 className="will-fade">Sip-Worthy Perfection</h2>
-                    <div className="mt-3" id="masked-content">
+                    <div id="masked-content">
                         <h3>Made with Craft, Poured with Passion</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos illum dicta repudiandae facere quaerat nulla esse ipsam iste?</p>
                     </div>
