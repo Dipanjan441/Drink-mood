@@ -41,18 +41,6 @@ const Menu = () => {
             yPercent: 0,
             ease: 'power1.inOut'
         })
-        //scroll trigger
-        const parallaxTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#menu',
-                start: 'top 30%',
-                end:'bottom 80%',
-                scrub: true
-            }
-        })
-        parallaxTimeline
-        .from('#m-left-leaf',{x:-100,y:100})
-        .from('#m-right-leaf', {x:100, y:100})
     }, [currentIndex])
 
     return (
