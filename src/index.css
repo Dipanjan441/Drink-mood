@@ -8,7 +8,8 @@
 }
 
 @theme {
-    --color-yellow: #e7d393;
+    --color-yellow: #ccff00; /* Neon Lime */
+    --color-yellow-dim: #ccff0020;
     --color-white-100: #efefef;
     --font-sans: "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
@@ -46,10 +47,17 @@ body {
 @utility radial-gradient {
     background: radial-gradient(
             circle at center,
-            #434343 0%,
-            #000 50%,
+            #1a2e05 0%, /* Dark green tint at center */
+            #000 60%,
             transparent 100%
     );
+}
+
+@utility glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
 }
 
 @utility masked-img {

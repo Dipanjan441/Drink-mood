@@ -6,17 +6,17 @@ import gsap from "gsap"
 const Cocktails = () => {
     useGSAP(() => {
         const parallaxTimeline = gsap.timeline({
-            scrollTrigger:{
+            scrollTrigger: {
                 trigger: '#cocktails',
                 start: 'top 30%',
                 end: 'bottom 80%',
                 scrub: true
             }
         })
-        parallaxTimeline.from('#c-left-leaf',{
+        parallaxTimeline.from('#c-left-leaf', {
             x: -100,
             y: 100
-        }).from('#c-right-leaf',{
+        }).from('#c-right-leaf', {
             x: 100,
             y: 100
         })
@@ -30,12 +30,12 @@ const Cocktails = () => {
                     <h2>Most popular cocktails: </h2>
                     <ul>
                         {cocktailLists.map((drink) => (
-                            <li key={drink.name}>
+                            <li key={drink.name} className="glass-panel p-5 hover:bg-white/5 transition-colors mb-4">
                                 <div className="md:me-28">
                                     <h3>{drink.name}</h3>
-                                    <p>{drink.country} | {drink.detail}</p>
+                                    <p className="opacity-70">{drink.country} | {drink.detail}</p>
                                 </div>
-                                <span>- {drink.price}</span>
+                                <span className="text-yellow font-bold text-2xl">{drink.price}</span>
                             </li>
                         ))}
                     </ul>
@@ -45,12 +45,12 @@ const Cocktails = () => {
                     <h2>Most loved mocktails: </h2>
                     <ul>
                         {mockTailLists.map((drink) => (
-                            <li key={drink.name}>
+                            <li key={drink.name} className="glass-panel p-5 hover:bg-white/5 transition-colors mb-4">
                                 <div className="md:me-28">
                                     <h3>{drink.name}</h3>
-                                    <p>{drink.country} | {drink.detail}</p>
+                                    <p className="opacity-70">{drink.country} | {drink.detail}</p>
                                 </div>
-                                <span>- {drink.price}</span>
+                                <span className="text-yellow font-bold text-2xl">{drink.price}</span>
                             </li>
                         ))}
                     </ul>

@@ -8,13 +8,13 @@ import { useMediaQuery } from "react-responsive";
 const Hero = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
-    const isMobile = useMediaQuery({maxWidth: 767});
+    const isMobile = useMediaQuery({ maxWidth: 767 });
 
     useGSAP(() => {
-        const heroSplit = new SplitText('.title',{type: 'chars, words'});
-        const paragraphSplit = new SplitText('.subtitle', {type: 'lines'});
+        const heroSplit = new SplitText('.title', { type: 'chars, words' });
+        const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
 
-        heroSplit.chars.forEach((char)=> char.classList.add('text-gradient'))
+        heroSplit.chars.forEach((char) => char.classList.add('text-gradient'))
         gsap.from(heroSplit.chars, {
             yPercent: 100,
             duration: 1.8,
@@ -22,7 +22,7 @@ const Hero = () => {
             stagger: 0.05
         })
 
-        gsap.from(paragraphSplit.lines,{
+        gsap.from(paragraphSplit.lines, {
             opacity: 0,
             yPercent: 100,
             duration: 1.8,
@@ -38,13 +38,13 @@ const Hero = () => {
                 end: 'bottom top',
                 scrub: true
             }
-        }). to('.right-leaf',{y:200},0)
-        .to('.left-leaf',{y: -200}, 0)
+        }).to('.right-leaf', { y: 200 }, 0)
+            .to('.left-leaf', { y: -200 }, 0)
 
         const startValue = isMobile ? 'top 50%' : 'center 60%';
         const endValue = isMobile ? '120% top' : 'bottom top';
 
-        if(videoRef.current) {
+        if (videoRef.current) {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: 'video',
@@ -54,31 +54,31 @@ const Hero = () => {
                     pin: true,
                 }
             })
-    
-            videoRef.current.onloadedmetadata = ()=> {
-                tl.to(videoRef.current,{
+
+            videoRef.current.onloadedmetadata = () => {
+                tl.to(videoRef.current, {
                     currentTime: videoRef.current?.duration
                 })
             }
         }
 
-    },[])
+    }, [])
     return (
         <>
             <section id="hero">
-                <h1 className="title">Mojito</h1>
+                <h1 className="title drop-shadow-[0_0_15px_rgba(204,255,0,0.5)]">Mojito</h1>
                 <img src="/images/hero-left-leaf.png" alt="left-leaf" className="left-leaf" />
                 <img src="/images/hero-right-leaf.png" alt="right-leaf" className="right-leaf" />
                 <div className="body">
                     <div className="content">
                         <div className="space-y-5 hidden md:block">
-                            <p>Cool. Crisp. Classic.</p>
+                            <p className="tracking-widest uppercase text-sm opacity-80">Cool. Crisp. Classic.</p>
                             <p className="subtitle">Sip the spirit <br /> of Summer </p>
                         </div>
                     </div>
                     <div className="view-cocktails">
-                        <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque consectetur accusamus fugit laboriosam tempore voluptas, laborum, cumque provident esse maxime beatae?</p>
-                        <a href="#cocktail">View Cocktail</a>
+                        <p className="subtitle opacity-90">Experience the perfect blend of zest and sweetness. The classic Mojito re-imagined for the modern palate.</p>
+                        <a href="#cocktail" className="inline-block px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-yellow hover:text-black hover:border-yellow hover:scale-105 transition-all duration-300 font-medium tracking-wide shadow-lg">View Cocktail</a>
                     </div>
                 </div>
             </section>

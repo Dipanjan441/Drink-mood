@@ -29,13 +29,13 @@ const Menu = () => {
                 ease: 'power1.inOut',
                 xPercent: 0
             })
-        gsap.fromTo('.details h2',{opacity: 0, yPercent: -100},{
+        gsap.fromTo('.details h2', { opacity: 0, yPercent: -100 }, {
             opacity: 1,
             duration: 1,
             yPercent: 0,
             ease: 'power1.inOut'
         })
-        gsap.fromTo('.details p',{opacity: 0, yPercent: 100},{
+        gsap.fromTo('.details p', { opacity: 0, yPercent: 100 }, {
             opacity: 1,
             duration: 1,
             yPercent: 0,
@@ -55,7 +55,7 @@ const Menu = () => {
                     const isActive = index === currentIndex;
 
                     return (
-                        <button onClick={()=>setCurrentIndex(index)} key={cocktail.id} className={isActive ? 'text-white border-white' : 'text-white/50 border-white/50'}>
+                        <button onClick={() => setCurrentIndex(index)} key={cocktail.id} className={isActive ? 'text-yellow border-yellow drop-shadow-[0_0_5px_rgba(204,255,0,0.5)]' : 'text-white/50 border-white/50 hover:text-white hover:border-white'}>
                             {cocktail.name}
                         </button>
                     )
@@ -63,26 +63,26 @@ const Menu = () => {
             </nav>
             <div className="content">
                 <div className="arrows">
-                    <button onClick={() => goToSlide(currentIndex - 1)} className="text-left">
+                    <button onClick={() => goToSlide(currentIndex - 1)} className="text-left hover:scale-110 transition-transform">
                         <span>{prevCocktail.name}</span>
                         <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true" />
                     </button>
-                    <button onClick={() => goToSlide(currentIndex + 1)} className="text-right">
+                    <button onClick={() => goToSlide(currentIndex + 1)} className="text-right hover:scale-110 transition-transform">
                         <span>{nextCocktail.name}</span>
                         <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true" />
                     </button>
                 </div>
                 <div className="cocktail">
-                    <img src={currentCocktail.image} alt="current cocktail" className="object-contain" />
+                    <img src={currentCocktail.image} alt="current cocktail" className="object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]" />
                 </div>
-                <div className="recipe">
+                <div className="recipe glass-panel p-8 rounded-2xl backdrop-blur-xl border-white/10 lg:w-[90%] mx-auto relative z-20">
                     <div ref={contentRef} className="info">
-                        <p>Recipe for : </p>
-                        <p id="title">{currentCocktail.name}</p>
+                        <p className="opacity-70">Recipe for : </p>
+                        <p id="title" className="text-4xl">{currentCocktail.name}</p>
                     </div>
                     <div className="details">
-                        <h2>{currentCocktail.title}</h2>
-                        <p>{currentCocktail.description}</p>
+                        <h2 className="mb-2">{currentCocktail.title}</h2>
+                        <p className="opacity-80">{currentCocktail.description}</p>
                     </div>
                 </div>
             </div>
