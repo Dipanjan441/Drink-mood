@@ -12,9 +12,9 @@ const Navbar = () => {
             }
         })
 
-        navTween.fromTo('nav', { 
-            backgroundColor: 'transparent', 
-            borderBottom: '1px solid transparent' 
+        navTween.fromTo('nav', {
+            backgroundColor: 'transparent',
+            borderBottom: '1px solid transparent'
         }, {
             backgroundColor: 'rgba(255, 255, 255, 0.02)',
             backdropFilter: 'blur(10px)',
@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <a href="#home" className="flex items-center gap-2">
+                <a href="#hero" className="flex items-center gap-2">
                     <img src="/images/logo.png" alt="Logo" className="w-8" />
                     <p className="tracking-wide">Drink Mood</p>
                 </a>
