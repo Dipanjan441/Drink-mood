@@ -72,13 +72,13 @@ const Hero = () => {
                 <div className="body">
                     <div className="content">
                         <div className="space-y-5 hidden md:block">
-                            <p className="tracking-widest uppercase text-sm opacity-80">Cool. Crisp. Classic.</p>
+                            <p className="tracking-widest uppercase opacity-80">Cool. Crisp. Classic.</p>
                             <p className="subtitle">Sip the spirit <br /> of Summer </p>
                         </div>
                     </div>
-                    <div className="view-cocktails">
+                    <div className="view-cocktails flex flex-col items-center">
                         <p className="subtitle opacity-90">Experience the perfect blend of zest and sweetness. The classic Mojito re-imagined for the modern palate.</p>
-                        <a href="#cocktail" className="inline-block px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-yellow hover:text-black hover:border-yellow hover:scale-105 transition-all duration-300 font-medium tracking-wide shadow-lg">View Cocktail</a>
+                        <a href="#cocktail" className="mt:2 inline-block px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-yellow hover:text-black hover:border-yellow hover:scale-105 transition-all duration-300 font-medium tracking-wide shadow-lg">View Cocktail</a>
                     </div>
                 </div>
             </section>
