@@ -35,7 +35,7 @@ const Contact = () => {
                 <div>
                     <h3>Contact Us</h3>
                     <p>91+ 8617******</p>
-                    <p>iamdip441@gmail.com</p>
+                    <p>hello@drinkmood.com</p>
                 </div>
                 <div>
                     <h3>Open Every Day</h3>
