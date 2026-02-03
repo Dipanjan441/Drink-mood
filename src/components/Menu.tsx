@@ -75,7 +75,7 @@ const Menu = () => {
                 <div className="cocktail">
                     <img src={currentCocktail.image} alt="current cocktail" className="object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]" />
                 </div>
-                <div className="recipe glass-panel p-8 rounded-2xl backdrop-blur-xl border-white/10 lg:w-[90%] mx-auto relative z-20">
+                <div className="recipe p-8 lg:w-[90%] mx-auto">
                     <div ref={contentRef} className="info">
                         <p className="opacity-70">Recipe for : </p>
                         <p id="title" className="text-4xl">{currentCocktail.name}</p>
