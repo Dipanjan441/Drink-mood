@@ -67,8 +67,8 @@ const Hero = () => {
         <>
             <section id="hero">
                 <h1 className="title drop-shadow-[0_0_15px_rgba(204,255,0,0.5)]">Mojito</h1>
-                <img src="/images/hero-left-leaf.png" alt="left-leaf" className="left-leaf" />
-                <img src="/images/hero-right-leaf.png" alt="right-leaf" className="right-leaf" />
+                <img src="images/hero-left-leaf.png" alt="left-leaf" className="left-leaf" />
+                <img src="images/hero-right-leaf.png" alt="right-leaf" className="right-leaf" />
                 <div className="body">
                     <div className="content">
                         <div className="space-y-5 hidden md:block">

@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav>
             <div>
                 <a href="#hero" className="flex items-center gap-2">
-                    <img src="/images/logo.png" alt="Logo" className="w-8" />
+                    <img src="images/logo.png" alt="Logo" className="w-8" />
                     <p className="tracking-wide">Drink Mood</p>
                 </a>
                 <ul className="hidden lg:flex">

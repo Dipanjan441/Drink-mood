@@ -19,17 +19,17 @@ const Art = () => {
             }
         })
 
-        maskTimeline.to('.will-fade',{
+        maskTimeline.to('.will-fade', {
             opacity: 0,
             stagger: 0.2,
             ease: 'power1.inOut'
-        }).to('.masked-img',{
-            scale: 1.2, 
+        }).to('.masked-img', {
+            scale: 1.2,
             maskPosition: 'center',
             maskSize: '350%',
             duration: 1,
             ease: 'power1.inOut'
-        }).to('#masked-content',{
+        }).to('#masked-content', {
             opacity: 1,
             duration: 1,
             ease: 'power1.inOut'
@@ -44,18 +44,18 @@ const Art = () => {
                     <ul className="space-y-4 will-fade">
                         {goodLists.map((ft, i) => (
                             <li key={i} className="flex items-center gap-2">
-                                <img src="/images/check.png" alt="check" />
+                                <img src="images/check.png" alt="check" />
                                 <p>{ft}</p>
                             </li>
                         ))}
                     </ul>
                     <div className="cocktail-img">
-                        <img src="/images/under-img.jpg" alt="cocktail-img" className="abs-center masked-img size-full object-contain" />
+                        <img src="images/under-img.jpg" alt="cocktail-img" className="abs-center masked-img size-full object-contain" />
                     </div>
                     <ul className="space-y-4 will-fade">
                         {featureLists.map((ft, i) => (
                             <li key={i} className="flex items-center justify-start gap-2">
-                                <img src="/images/check.png" alt="check" />
+                                <img src="images/check.png" alt="check" />
                                 <p className="md:w-fit w-60">{ft}</p>
                             </li>
                         ))}
